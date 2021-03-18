@@ -1,13 +1,35 @@
 # Neural ODE Processes
 
-Official code for the paper [Neural ODE Processes](https://openreview.net/forum?id=27acGyyI1BY). 
+Official code for the paper [Neural ODE Processes](https://openreview.net/forum?id=27acGyyI1BY) (ICLR 2021). 
 
-![Alt text](figures/NDP.png "Neural ODE Processes")
-
+![Neural ODE Processes](figures/NDP.png "Neural ODE Processes")
 
 ## Abstract
 
-Neural Ordinary Differential Equations (NODEs) use a neural network to model the instantaneous rate of change in the state of a system. However, despite their apparent suitability for dynamics-governed time-series, NODEs present a few disadvantages. First, they are unable to adapt to incoming data-points, a fundamental requirement for real-time applications imposed by the natural direction of time. Second, time-series are often composed of a sparse set of measurements that could be explained by many possible underlying dynamics. NODEs do not capture this uncertainty. In contrast, Neural Processes (NPs) are a new class of stochastic processes providing uncertainty estimation and fast data-adaptation, but lack an explicit treatment of the flow of time. To address these problems, we introduce Neural ODE Processes (NDPs), a new class of stochastic processes determined by a distribution over Neural ODEs. By maintaining an adaptive data-dependent distribution over the underlying ODE, we show that our model can successfully capture the dynamics of low-dimensional systems from just a few data-points. At the same time, we demonstrate that NDPs scale up to challenging high-dimensional time-series with unknown latent dynamics such as rotating MNIST digits.  
+Neural Ordinary Differential Equations (NODEs) use a neural network to model the instantaneous rate
+of change in the state of a system. However, despite their apparent suitability for dynamics-governed 
+time-series, NODEs present a few disadvantages. First, they are unable to adapt to incoming data-points,
+a fundamental requirement for real-time applications imposed by the natural direction of time. 
+Second, time-series are often composed of a sparse set of measurements that could be explained by 
+many possible underlying dynamics. NODEs do not capture this uncertainty. In contrast, Neural Processes (NPs) 
+are a new class of stochastic processes providing uncertainty estimation and fast data-adaptation, 
+but lack an explicit treatment of the flow of time. To address these problems, we introduce Neural 
+ODE Processes (NDPs), a new class of stochastic processes determined by a distribution over Neural ODEs.
+By maintaining an adaptive data-dependent distribution over the underlying ODE, we show that our model 
+can successfully capture the dynamics of low-dimensional systems from just a few data-points. 
+At the same time, we demonstrate that NDPs scale up to challenging high-dimensional time-series with 
+unknown latent dynamics such as rotating MNIST digits.
+
+```
+@inproceedings{
+    norcliffe2021neural,
+    title={Neural {\{}ODE{\}} Processes},
+    author={Alexander Norcliffe and Cristian Bodnar and Ben Day and Jacob Moss and Pietro Li{\`o}},
+    booktitle={International Conference on Learning Representations},
+    year={2021},
+    url={https://openreview.net/forum?id=27acGyyI1BY}
+}
+```
 
 ## Getting started
 
@@ -48,4 +70,9 @@ To use the rotating MNIST datasets, run the script below in order to download th
 ```bash
 bash data/download_datasets.sh
 ```
+
+## Credits
+
+Our code relies to a great extent on the [Neural Process implementation](https://github.com/EmilienDupont/neural-processes) by 
+Emilien Dupont. The RotMNIST dataset code adapts the [ODE2VAE code](https://github.com/cagatayyildiz/ODE2VAE).
 

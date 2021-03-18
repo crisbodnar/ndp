@@ -1,0 +1,17 @@
+datasets/*.hkl
+datasets/mnist
+
+.ipynb_checkpoints/
+
+__pycache__/
+
+datasets/rot*
+drawing.pdf
+
+drawing.svg
+
+diagrams/
+
+.DS_Store
+.idea/
+.vscode
