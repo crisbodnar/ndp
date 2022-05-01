@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 from data.data_loading import load_dataset
 from models.neural_process import ConvNeuralProcess, ConvNeuralODEProcess
 from models.training import TimeNeuralProcessTrainer
-from plotting.img_regression_plotting import plot_img_regression_prediction
+from plotting.img_reg_plotting import plot_img_regression_prediction
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0)
