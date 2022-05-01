@@ -34,7 +34,7 @@ unknown latent dynamics such as rotating MNIST digits.
 ## Getting started
 
 For development, we used `Python 3.8.5` and `PyTorch 1.8`. First, install `PyTorch`
-using the [official page](https://pytorch.org/) and then run the following command to install
+and `torchvision` using the [official page](https://pytorch.org/) and then run the following command to install
 the requited packages:
 ```bash
 pip install -r requirements.txt
